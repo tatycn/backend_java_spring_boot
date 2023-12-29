@@ -1,0 +1,20 @@
+# DataSource Config
+spring:
+  profiles:
+    active: pg1
+
+  mail:
+    host: smtp.exmail.qq.com
+    port: 465
+    username: service@XX.XX
+    password: XXXXXXXX
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+         auth: true
+         ssl:
+          enable: true
+          socketFactory:
+           class: com.sun.mail.util.MailSSLSocketFactory
+           fallback: false
