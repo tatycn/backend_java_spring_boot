@@ -23,4 +23,3 @@ Activate
 ```bash
 source ~/.bash_profile
 ```
-12
