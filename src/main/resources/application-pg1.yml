@@ -12,9 +12,9 @@ spring:
       strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
       datasource:
         master:
-          url: jdbc:postgresql://localhost/test?currentSchema=public&stringtype=unspecified
-          username: postgres
-          password: 1357_Qetu
+          url: jdbc:postgresql://10.166.168.98:5432/HYCX.Noise.HuiZhou?currentSchema=public&stringtype=unspecified
+          username: user_CWJa4j
+          password: password_5ixtNx
           driver-class-name: org.postgresql.Driver
     hikari:
       #连接池名
