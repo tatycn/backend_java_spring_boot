@@ -14,7 +14,8 @@ public class FastGeneratorPG {
      * DB Config
      */
     private static final DataSourceConfig.Builder DATA_SOURCE_CONFIG = new DataSourceConfig.Builder(
-            "jdbc:postgresql://localhost:55434/postgres?currentSchema=public", "postgres", "");
+            "jdbc:postgresql://10.166.168.98:5432/HYCX.Noise.HuiZhou?currentSchema=public", "user_CWJa4j",
+            "password_5ixtNx");
 
     /**
      * Run
@@ -28,9 +29,10 @@ public class FastGeneratorPG {
             builder.parent("earth.tiangong.backend")
                     .pathInfo(Collections.singletonMap(OutputFile.mapperXml, "src/main/resources/mapper"));
         }).strategyConfig(builder -> {
-            builder.enableSchema().addInclude("demo_employee");
-            // builder.addInclude("elcd__processes"); // table name
-            // .addTablePrefix("elcd_"); // table filter
+            builder.enableSchema()
+                    // .addInclude("demo_employee");
+                    // builder.addInclude("elcd__processes"); // table name
+                    .addTablePrefix("t_"); // table filter
         }).templateEngine(new FreemarkerTemplateEngine()).execute();
     }
 }
